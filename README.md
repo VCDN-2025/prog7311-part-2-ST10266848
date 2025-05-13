@@ -32,6 +32,18 @@ For the css theme, I decided to replace the default theme with a custom dark the
 
 ----
 
+# 🛠️App Setup Instructions:
+## Prerequisites
+- Before you can begin, you should already have the following programs set up and running on your machine:
+  - GitHub Desktop
+  - Visual Studio
+  - SQL Server Managemenr Studio
+
+
+## 1. 
+
+----
+
 # 👥Users and Roles
 ## 🪪AspNetCore Identities:
 - Microsoft's AspNetCore Identities plugin in Visual Studio has been used to set up users and roles
@@ -128,17 +140,5 @@ For the css theme, I decided to replace the default theme with a custom dark the
 
 
 ### Explanation
-
----
-
-# 🛠️App Setup Instructions:
-## Prerequisites
-- Before you can begin, you should already have the following programs set up and running on your machine:
-  - GitHub Desktop
-  - Visual Studio
-  - SQL Server Managemenr Studio
-
-
-## 1. 
 
 

@@ -70,33 +70,63 @@ For the css theme, I decided to replace the default theme with a custom dark the
 
 # 💾SQL Database Structure and Pre-population of data in SSMS
 ## SQL Database Structure
+### Products, Users, User Roles and roles tables:
+![Ssms_GNqFQGECAM](https://github.com/user-attachments/assets/a27025e3-cd3c-432b-a910-e2c044c00a0d)
+
 ## Pre-population of sample data
+### Users:
+![Ssms_cfdTfyaEsd](https://github.com/user-attachments/assets/210b6c46-055a-46d2-b7bf-567cb3964a88)
+### Roles:
+![Ssms_xiMrS4cL70](https://github.com/user-attachments/assets/2e3e4f36-a7af-45e2-976d-5ff54230c382)
+### Products:
+![Ssms_EKNOdO8RQn](https://github.com/user-attachments/assets/23c0c049-b5dc-4bfa-b05e-b90ec800e9b8)
 
 ----
 
 # ✅Core Functionalities
-## Farmer Product View
-### Screenshot(s)
-### Explanation
+## 'Your Product' View - Farmer Product View
+### Screenshot:
+![brave_gpqGMcVpMz](https://github.com/user-attachments/assets/b72e6c4f-b0da-4f00-b01a-9788d28861d2)
+### Explanation:
+- This view is where farmers can view the details of the products they have added (such as their product name, category, production date, description and price).
+- If they have not added any yet, they can simply do so by pressing the viewable 'Add Product' button.
+- After adding a product, details related to the product will populate the table.
+- When a specific farmer is signed in to the Agri-Energy Connect Platform, the Farmer Product View (also known as the 'Your Products' view) will only display the products that they have added so they will not be able to view all the products added by all farmers.
 
 ## Add Product View
-### Screenshot(s)
-### Explanation
+### Screenshot:
+![brave_t0jwVyznPq](https://github.com/user-attachments/assets/6e4f3bcb-71cb-48b8-97bc-d1bf4c5528f1)
+
+### Explanation:
+- When a farmer clicks on the 'Add Product' button they will be taken to this view.
+- This view allows them to enter details for the products such as their name, imageURL, category, production date, description and finally their price.
+- Once the product's details have been entered, the farmer can then click on the 'Add' button to actually add their product before being redirected back to the 'Your Product' view as well as populating it with any products they may add
+- There is validation to ensure that the farmer's inputs are correctly formatted before storing them in their respective fields in the 'Products' table in the local SQL database.
 
 ## Employee Dashboard
-### Screenshot(s)
+### Screenshot
+![brave_beP5HpT7bQ](https://github.com/user-attachments/assets/8e7899cd-6649-4aa3-add0-ad8d439f8b26)
+
 ### Explanation
 
 ## Manage Farmers View
-### Screenshot(s)
+### Screenshot:
+![brave_qtVUyoij0Z](https://github.com/user-attachments/assets/cde806ed-5e52-4c3f-877c-724b773011bf)
+
 ### Explanation
 
-## Edit Farmer View
-### Screenshot(s)
+## Add Farmer View
+### Screenshot:
+![image](https://github.com/user-attachments/assets/ff5becb9-e6bd-4247-a608-496ea9403637)
 ### Explanation
 
 ## All Farmer Products View
-### Screenshot(s)
+### Screenshots:
+![image](https://github.com/user-attachments/assets/f31e4933-f67b-47cb-b44d-6e557b9dc185)
+![image](https://github.com/user-attachments/assets/853c1bea-4a80-4d2b-aad7-356ceb568401)
+![image](https://github.com/user-attachments/assets/4352fcb4-fec5-49a8-adc0-21faf53aa95a)
+
+
 ### Explanation
 
 ---

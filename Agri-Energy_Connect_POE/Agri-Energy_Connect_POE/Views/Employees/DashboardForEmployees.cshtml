@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Employee Dashboard";
+}
+
+<h2>Your Dashboard</h2>
+
+<h4 align="Left">As an employee, this is where you'll be able to manage the data of farmers and view all the products supplied by farmers</h4>
+<p>        </p>
+<h5 align="Left">Need to manage farmers?</h5>
+<a href="@Url.Action("ManageFarmers", "Employees")" class="btn btn-info">Manage Farmers</a>
+<p>       </p>
+<h5 align="Left">Need to view all products by farmers?</h5>
+<a href="@Url.Action("AllFarmerProducts", "Products")" class="btn btn-info">All Products</a>

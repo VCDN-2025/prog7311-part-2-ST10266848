@@ -1,0 +1,114 @@
+﻿@model Agri_Energy_Connect_POE.ViewModels.AllFarmerProductsViewModel
+
+@* Code Attribution for this view:
+   Author: fb-shaik
+   Website: GitHub
+   Link: https://github.com/fb-shaik/PROG6212-Group1-2024/blob/main/EmployeeLeaveManagement_G1_Unit%20Testing.zip
+   Date accessed: 11 April 2025
+*@
+
+@{
+    ViewData["Title"] = "All Added Products";
+}
+
+<h2>All Farmer Products</h2>
+<p>                     </p>
+<h4>Want to view products supplied by a specific farmer? Then you have come to the place!</h4>
+<h4>You can select a farmer's email and filter product results by their category or even by a date range!</h4>
+<p>             </p>
+<!-- validation summary -->
+@Html.ValidationSummary(
+        excludePropertyErrors: true,
+        message: "",
+        htmlAttributes: new { @class = "alert alert-danger" }
+    )
+
+<form method="get" asp-action="AllFarmerProducts" class="row g-3 mb-4">
+    <div class="col-md-3">
+        <label class="form-label" for="usernameFilter">Farmer Username</label>
+        <select name="usernameFilter" id="usernameFilter" class="form-select">
+            <option value="">-- All Farmers --</option>
+            @foreach (var user in Model.AvailableUsernames)
+            {
+                if (user == Model.UsernameFilter)
+                {
+                    <option value="@user" selected>@user</option>
+                }
+                else
+                {
+                    <option value="@user">@user</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="categoryFilter">Category</label>
+        <select name="categoryFilter" id="categoryFilter" class="form-select">
+            <option value="">-- All Categories --</option>
+            @foreach (var cat in Model.AvailableCategories)
+            {
+                if (cat == Model.CategoryFilter)
+                {
+                    <option value="@cat" selected>@cat</option>
+                }
+                else
+                {
+                    <option value="@cat">@cat</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="col-md-2">
+        <label class="form-label">From Date</label>
+        <input type="date" name="fromDate" value="@(Model.FromDate?.ToString("yyyy-MM-dd"))"
+        class="form-control" />
+    </div>
+    <div class="col-md-2">
+        <label class="form-label">To Date</label>
+        <input type="date" name="toDate" value="@(Model.ToDate?.ToString("yyyy-MM-dd"))"
+        class="form-control" />
+    </div>
+    <div class="col-md-2 align-self-end">
+        <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+    </div>
+</form>
+
+@if (!Model.Products.Any())
+{
+    <div class="alert alert-info" role="alert">
+        No products found matching your selected criteria.
+    </div>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Farmer</th>
+                <th>Category</th>
+                <th>Production Date</th>
+                <th>Description</th>
+                <th>Price (ZAR)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.ProductId</td>
+                    <td>@product.ProductName</td>
+                    <td>
+                        <img src="@Url.Action("GetImage", "Products", new { productId = product.ProductId })" height="250" width="250" />
+                    <td>@product.User</td>
+                    <td>@product.ProductCategory</td>
+                    <td>@product.ProductionDate.ToShortDateString()</td>
+                    <td>@product.ProductDescription</td>
+                    <td>@product.ProductPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Agri_Energy_Connect_POE.Models.Product>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@* Code Attribution for this view:
+   Author: fb-shaik
+   Website: GitHub
+   Link: https://github.com/fb-shaik/PROG6212-Group1-2024/blob/main/EmployeeLeaveManagement_G1_Unit%20Testing.zip
+   Date accessed: 11 April 2025
+*@
+
+@{
+    ViewData["Title"] = "Your Products";
+}
+
+<h2>Your Products</h2>
+<p>               </p>
+<h4>Want to add a product that you supply? Click on the 'Add Product' button to do just that!</h4>
+<p>               </p>
+<a asp-action="AddProduct" class="btn btn-primary">Add Product</a>
+<p>                </p>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Category</th>
+            <th>Production Date</th>
+            <th>Description</th>
+            <th>Price (ZAR)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ProductId</td>
+                <td>@product.ProductName</td>
+                <td>
+                    <img src="@Url.Action("GetImage", "Products", new { productId = product.ProductId })" height="250" width="250" />
+                </td>
+                <td>@product.ProductCategory</td>
+                <td>@product.ProductionDate.ToShortDateString()</td>
+                <td>@product.ProductDescription</td>
+                <td>@product.ProductPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

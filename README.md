@@ -37,11 +37,58 @@ For the css theme, I decided to replace the default theme with a custom dark the
 - Before you can begin, you should already have the following programs set up and running on your machine:
   - GitHub Desktop
   - Visual Studio
-  - SQL Server Managemenr Studio
+  - SQL Server Express
+  - SQL Server Management Studio
 
 ## Step-by-Step Instructions:
-1. Cloning this GitHub repository onto your local machine.
-1.1. First...
+1. Clone this GitHub repository onto your local machine.
+1.1. On the main page of this repository, click on the green 'Code' button (the one with a downward arrow symbol).
+1.2. On the pop-up box that appears, click on the 'Open with GitHub Desktop' option.
+1.3. GitHub Desktop should now open up automatically (if it didn't open yet and you received a prompt instead, click on 'allow' and then it should open for you)
+1.4 Once in GitHub Desktop, you will be prompted with a 'Clone Repository' dialog box with the GitHub repo's url automatically filled in and Local Path that you must select. Select a folder on your machine to store a local version of this GitHub repository (Note: The folder must be empty for git though).
+1.5 Click on the 'Clone' button to clone this gitHub repository. All files and folders in this remote GitHub repository will now be copied and stored in the folder in the local folder you have selected.
+The GitHub repository should now have been successfully cloned and you can view it on your local machine!
+
+2. Import SQL database and its data:
+2.1 Go to the local folder where you cloned this GitHub repository. You should see a folder named 'prog7311-part-2-ST10266848', double click on it to open it.
+2.2 Once inside the 'prog7311-part-2-ST10266848' folder, you should see 2 more folders. Double click on the one named 'Agri-Energy_Connect_DB' to open it. 
+2.3 Once inside the 'Agri-Energy_Connect_DB' folder, You should now see a single 'sql' file. Double click on the 'Agri-Energy_Connect_DB' sql file to open it in SSMS.
+2.4 Once in SSMS, click on connect on the SQL Server dialog box. You should now see the contents of the sql file in front of you.
+2.5. To create the sql database and insert all of the sample data, execute the sql file by clicking the 'execute' button above the filename or press F5 on your keyboard.
+2.6 Once the sql file has been fully executed, the 'Agri-Energy_Connect_DB' database should be fully created along with all its tables and sample data!
+
+3. Open the app in Visual Studio
+3.1 Open Visual Studio by double clicking on its icon.
+3.2 Select the 'Open a project or solution option'
+3.3 Navigate to the 'prog7311-part-2-ST10266848' folder, double click on the 'Agri-Energy_Connect_POE' folder and finally, double click on the 'Agri-Energy_Connect_POE.sln' file (it should be the file with a small Visual Studio icon next to it).
+3.4 The application should now be open in Visual Studio!
+
+4. Connect Visual Studio to SQL database
+4.1 Navigate to the 'tools' section in Visual Studio's top navbar (click on it) and then select the 'Connect to Database' option, the corresponding dialog box will open.
+4.2 Open up a new window of SQL Server Management Studio (SSMS), copy (press Ctrl + C on your keyboard) the server name from SSMS's 'Connect' dialog box and return to Visual Studio.
+4.3. In Visual Studio's 'Connect' dialog, paste in the server name that you just copied (Ctrl + V or left click the textbox and click 'Paste').
+4.4. Set 'Trust Server Certificate' to 'True' from the drop-down menu.
+4.5. Select the 'Agri-Energy_Connect_DB' from the database name drop-down menu and then click on the 'Connect' button.
+4.6. You should now be connected to the database but to confirm that you are, click on 'View' from Visual Studio's top navbar and click on the 'SQL Server Object Explorer' tool to open it up. You should now see a SQLEXPRESS server which you should click to open to view all its folder.
+4.7. Open the 'databases' folder in 'SQL Server Object Explorer' and if everything had been successful so far, you should see the 'Agri-Energy_Connect_DB' in the list of databases.
+
+5. Connect app to SQL database in Visual Studio
+So far we have just connected the SQL database to Visual Studio but we have not yet integrated it with the app. 
+5.1. Open 'SQL Server Object Explorer' in Visual Studio and right click on the 'SQLEXPRESS' server instance you used for the Agri-Energy_Connect_DB and click on properties.
+5.2. A properties tab should open on your left. Go to the 'Connection String' section and copy the value next it by double clicking the value and right clicking it to copy it or by pressing Ctrl + C.
+5.3. Once the connection string has been copied, navigate to the Solution Explorer in Visual Studio and double click on the appsettings.json file.
+5.4. Just after the opening curly brace at the top, press the double quotation mark on your keyboard ("), Visual Studio should automatically insert insert double quotation mark and place your cursor in between them. 5.5. Now begin typing the word 'ConnectionString' between the double quotation marks and you should be prompted with an auto-complete suggestion, press tab to complete it.
+5.6. As you can see it added a pair of curly braces for the connection string. Open these curly braces by moving your cursor inside them and pressing 'enter' on your keyboard.
+5.7. Enter a double quotation mark inside this curly brace pair and within the double quotation marks, type the name of the database 'Agri-Energy_Connect_DB' and after the double quotations, enter a colon which would automatically bring in a pair of double quotation marks next to the colon.
+5.8 Inside this pair of double quotation marks, paste in the 'Connection String' that you copied earlier.
+5.9 We are not complete yet as we still need to specify the database itself within the connection string. To do this, we add another semi-colon after the data source name and enter the following: Initial Catelog=databaseName where databaseName is the name of the database in full. An example of how your connection string should look like in Visual Studio would be: "Data Source=KREASON1\\SQLEXPRESS;Initial Catalog=Agri-Energy_Connect_DB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" where the data source name may depend on the name of your Windows user.
+5.10. Open the 'Program.cs' file in the project's Solution Explorer and navigate to line 9.
+5.11. Within the innermost pair of brackets immediately next to the term GetConnectionString, ensure that the name of connection string corresponds with the connection string name in the appsettings.json file and you should be could to go.
+
+6. Running the app on your browser
+6.1 Everything should be fully set up and now you should be ready to run the app by pressing F5 on your keyboard or pressing the green button in the navbar. Your default browser will open up automatically to display the home page of the app.
+6.2. 
+   
 
 ----
 

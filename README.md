@@ -140,5 +140,10 @@ For the css theme, I decided to replace the default theme with a custom dark the
 
 
 ### Explanation
-
-
+- This view is where Employees will be able to see all the products that all farmers have added.
+- This view also includes filters for the farmer's name, product's category as well as a date range filter for product production dates.
+- These filters serve to assist the employee with narrowing down product search results.
+- To apply any or all of these filters, an employee selects the filter(s) they would like to apply and then clicks on the 'Apply Filters' button to apply them.
+- To view all the products supplied by a specific farmer, an employee must select the email of that specific farmer from the 'All Farmers' drop-down menu and then click on the 'Apply Filters' button.
+- If they wish to narrow the products down even further, they can select a specific category and select a specific production date range to view products for.
+- These filters can be used separately, in combination with each other or interchangeably.

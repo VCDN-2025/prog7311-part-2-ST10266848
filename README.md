@@ -33,7 +33,7 @@ For the css theme, I decided to replace the default theme with a custom dark the
 ----
 
 # 👥Users and Roles
-## AspNetCore Identities:
+## 🪪AspNetCore Identities:
 - Microsoft's AspNetCore Identities plugin in Visual Studio has been used to set up users and roles
 
 ## 🎭Roles:

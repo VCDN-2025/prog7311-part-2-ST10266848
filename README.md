@@ -41,7 +41,7 @@ For the css theme, I decided to replace the default theme with a custom dark the
   - SQL Server Management Studio
 
 ## Step-by-Step Instructions:
-1. Clone this GitHub repository onto your local machine.
+**1. Clone this GitHub repository onto your local machine.**
   - On the main page of this repository, click on the green 'Code' button (the one with a downward arrow symbol)
   - On the pop-up box that appears, click on the 'Open with GitHub Desktop' option.
   - GitHub Desktop should now open up automatically (if it didn't open yet and you received a prompt instead, click on 'allow' and then it should open for you)
@@ -49,7 +49,7 @@ For the css theme, I decided to replace the default theme with a custom dark the
   - Click on the 'Clone' button to clone this gitHub repository. All files and folders in this remote GitHub repository will now be copied and stored in the folder in the local folder you have selected.
   - The GitHub repository should now have been successfully cloned and you can view it on your local machine!
 
-3. Import SQL database and its data:
+**2. Import SQL database and its data:**
   - Go to the local folder where you cloned this GitHub repository. You should see a folder named 'prog7311-part-2-ST10266848', double click on it to open it.
   - Once inside the 'prog7311-part-2-ST10266848' folder, you should see 2 more folders. Double click on the one named 'Agri-Energy_Connect_DB' to open it.
   - Once inside the 'Agri-Energy_Connect_DB' folder, You should now see a single 'sql' file. Double click on the 'Agri-Energy_Connect_DB' sql file to open it in SSMS.
@@ -57,13 +57,13 @@ For the css theme, I decided to replace the default theme with a custom dark the
   - To create the sql database and insert all of the sample data, execute the sql file by clicking the 'execute' button above the filename or press F5 on your keyboard.
   - Once the sql file has been fully executed, the 'Agri-Energy_Connect_DB' database should be fully created along with all its tables and sample data!
 
-4. Open the app in Visual Studio
+**3. Open the app in Visual Studio**
   - Open Visual Studio by double clicking on its icon.
   - Select the 'Open a project or solution option'
   - Navigate to the 'prog7311-part-2-ST10266848' folder, double click on the 'Agri-Energy_Connect_POE' folder and finally, double click on the 'Agri-Energy_Connect_POE.sln' file (it should be the file with a small Visual Studio icon next to it).
   - The application should now be open in Visual Studio!
 
-6. Connect Visual Studio to SQL database
+**4. Connect Visual Studio to SQL database**
   - Navigate to the 'tools' section in Visual Studio's top navbar (click on it) and then select the 'Connect to Database' option, the corresponding dialog box will open.
   - Open up a new window of SQL Server Management Studio (SSMS), copy (press Ctrl + C on your keyboard) the server name from SSMS's 'Connect' dialog box and return to Visual Studio.
   -  In Visual Studio's 'Connect' dialog, paste in the server name that you just copied (Ctrl + V or left click the textbox and click 'Paste').
@@ -72,7 +72,7 @@ For the css theme, I decided to replace the default theme with a custom dark the
   -   You should now be connected to the database but to confirm that you are, click on 'View' from Visual Studio's top navbar and click on the 'SQL Server Object Explorer' tool to open it up. You should now see a SQLEXPRESS server which you should click to open to view all its folder.
   -   Open the 'databases' folder in 'SQL Server Object Explorer' and if everything had been successful so far, you should see the 'Agri-Energy_Connect_DB' in the list of databases.
 
-7. Connect app to SQL database in Visual Studio
+**5. Connect app to SQL database in Visual Studio**
 So far we have just connected the SQL database to Visual Studio but we have not yet integrated it with the app.
   - Open 'SQL Server Object Explorer' in Visual Studio and right click on the 'SQLEXPRESS' server instance you used for the Agri-Energy_Connect_DB and click on properties.
   - A properties tab should open on your left. Go to the 'Connection String' section and copy the value next it by double clicking the value and right clicking it to copy it or by pressing Ctrl + C.
@@ -86,7 +86,7 @@ So far we have just connected the SQL database to Visual Studio but we have not 
   - Open the 'Program.cs' file in the project's Solution Explorer and navigate to line 9.
   - Within the innermost pair of brackets immediately next to the term GetConnectionString, ensure that the name of connection string corresponds with the connection string name in the appsettings.json file and you should be could to go.
 
-8. Running the app on your browser
+**6. Running the app on your browser**
   - Everything should be fully set up and now you should be ready to run the app by pressing F5 on your keyboard or pressing the green button in the navbar. Your default browser will open up automatically to display the home page of the app.
   -  
    

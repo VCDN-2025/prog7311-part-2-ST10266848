@@ -39,8 +39,9 @@ For the css theme, I decided to replace the default theme with a custom dark the
   - Visual Studio
   - SQL Server Managemenr Studio
 
-
-## 1. 
+## Step-by-Step Instructions:
+1. Cloning this GitHub repository onto your local machine.
+1.1. First...
 
 ----
 

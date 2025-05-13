@@ -73,7 +73,7 @@ For the css theme, I decided to replace the default theme with a custom dark the
   -   Open the 'databases' folder in 'SQL Server Object Explorer' and if everything had been successful so far, you should see the 'Agri-Energy_Connect_DB' in the list of databases.
 
 **5. Connect app to SQL database in Visual Studio**
-So far we have just connected the SQL database to Visual Studio but we have not yet integrated it with the app.
+  - So far we have just connected the SQL database to Visual Studio but we have not yet integrated it with the app so let's do just that:
   - Open 'SQL Server Object Explorer' in Visual Studio and right click on the 'SQLEXPRESS' server instance you used for the Agri-Energy_Connect_DB and click on properties.
   - A properties tab should open on your left. Go to the 'Connection String' section and copy the value next it by double clicking the value and right clicking it to copy it or by pressing Ctrl + C.
   -  Once the connection string has been copied, navigate to the Solution Explorer in Visual Studio and double click on the appsettings.json file.

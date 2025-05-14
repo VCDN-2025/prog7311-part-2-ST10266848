@@ -1,6 +1,6 @@
 # 🗂️Project Overview
 
-**Note:** This only a functional prototype containing only the required core functionalities for this part of the POE. 
+**Please Note:** This only a functional prototype containing only the required core functionalities for this part of the POE. 
 
 ## 📝What our application does?
 My application allows farmers to add the products that they supply, to their profiles. Also, my application allows employees to view all the products that farmers supply as well as allowing employees to add farmers and manage their accounts. 

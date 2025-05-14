@@ -87,9 +87,10 @@ For the css theme, I decided to replace the default theme with a custom dark the
   - Within the innermost pair of brackets immediately next to the term GetConnectionString, ensure that the name of connection string corresponds with the connection string name in the appsettings.json file and you should be could to go.
 
 **6. Running the app on your browser**
-  - Everything should be fully set up and now you should be ready to run the app by pressing F5 on your keyboard or pressing the green button in the navbar. Your default browser will open up automatically to display the home page of the app.
-  -  
-   
+  - Everything should be fully set up and now you should be ready to run the app by pressing F5 on your keyboard or pressing the green button in the top navbar of Visual Studio. Your default browser will open up automatically to display the home page of the app.
+  - To access the 'Your Products' page to add products to your profile, you need to be logged in as a farmer.
+  - To access the 'Employee Dashboard' page to manage farmers and view all their products, you need to be logged in as an Employee.
+  - To log into the app, you can either click on the 'Your Products' button or the 'Login' button in the app's navbar at the top and enter your login details.
 
 ----
 
